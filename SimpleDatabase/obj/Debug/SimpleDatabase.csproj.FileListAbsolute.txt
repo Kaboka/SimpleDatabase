@@ -1,0 +1,7 @@
+D:\Development\Database\ExerciseOne\SimpleDatabase\SimpleDatabase\bin\Debug\SimpleDatabase.exe.config
+D:\Development\Database\ExerciseOne\SimpleDatabase\SimpleDatabase\bin\Debug\SimpleDatabase.exe
+D:\Development\Database\ExerciseOne\SimpleDatabase\SimpleDatabase\bin\Debug\SimpleDatabase.pdb
+D:\Development\Database\ExerciseOne\SimpleDatabase\SimpleDatabase\obj\Debug\SimpleDatabase.csprojResolveAssemblyReference.cache
+D:\Development\Database\ExerciseOne\SimpleDatabase\SimpleDatabase\obj\Debug\SimpleDatabase.csproj.CoreCompileInputs.cache
+D:\Development\Database\ExerciseOne\SimpleDatabase\SimpleDatabase\obj\Debug\SimpleDatabase.exe
+D:\Development\Database\ExerciseOne\SimpleDatabase\SimpleDatabase\obj\Debug\SimpleDatabase.pdb
