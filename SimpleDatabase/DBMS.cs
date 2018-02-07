@@ -20,25 +20,21 @@ namespace SimpleDatabase
         {
             string dataLocation;
             indices.TryGetValue(key, out dataLocation);
-            char[] myData = "Index dosent exsist".ToCharArray();
+            byte[] myData = Encoding.UTF8.GetBytes("Index dosent exsist".ToCharArray());
             if (dataLocation != null)
             {
                 string[] data = dataLocation.Split(';');
                 int offset = int.Parse(data[0]);
                 int length = int.Parse(data[1]) - offset;
-                myData = new char[offset + length];
+                myData = new byte[length];
 
-                using (StreamReader sr = new StreamReader("Database.txt"))
+                using (var s = new FileStream("Database.txt", FileMode.Open))
                 {
-                    while (!sr.EndOfStream)
-                    {
-                        sr.ReadBlock(myData, offset, length);
-                        /*   string line = sr.ReadLine(); //Brug readblock istedet
-                           myData = line.Substring(offset, length);*/
-                    }
+                    s.Seek(offset, SeekOrigin.Begin);
+                    s.Read(myData, 0, length);
                 }
             }
-            return new string(myData).Replace(" ", String.Empty);
+            return Encoding.UTF8.GetString(myData,0,myData.Length);
         }
 
         public void WriteData(int key, string value)
